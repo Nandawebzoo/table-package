@@ -1,0 +1,76 @@
+/* Reset some default styles for consistency */
+body,
+h1,
+h2,
+table,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Basic styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Foceans-and-fisheries.ec.europa.eu%2Fnews%2Feu-fish-market-2021-edition-now-online-2021-11-22_en&psig=AOvVaw30iYXWySFNCsLylefmdcbs&ust=1695109608158000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKC2icLVs4EDFQAAAAAdAAAAABAE"); /* Ganti dengan URL gambar yang sesuai */
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+main {
+    text-align: center;
+    margin: 20px;
+}
+
+.package-list {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#package-table-body tr:hover {
+    background-color: #d9edf7;
+    cursor: pointer;
+}
+
+#package-table-body tr:hover td {
+    color: #31708f;
+}

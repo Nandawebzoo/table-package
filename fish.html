@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fish.css" />
+    <title>Pembelian Ikan</title>
+  </head>
+  <body>
+    <header>
+      <h1>Selamat Datang di Toko Paket</h1>
+    </header>
+    <main>
+      <section class="package-list">
+        <h2>List of Active Packages</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Package Name</th>
+              <th>Package Quantity</th>
+              <th>Weight</th>
+              <th>Location</th>
+              <th>ROI</th>
+              <th>Monthly Payment</th>
+              <th>Payment Method Set</th>
+            </tr>
+          </thead>
+          <tbody id="package-table-body">
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                // Simulasikan data paket aktif, Anda dapat menggantinya dengan data sebenarnya
+                const activePackages = [
+                  {
+                    packageName: "Package 1",
+                    packageQuantity: 5,
+                    weight: "10 kg",
+                    location: "Jakarta",
+                    roi: "15%",
+                    monthlyPayment: "Rp 500,000",
+                    paymentMethodSet: "Credit Card",
+                  },
+                  {
+                    packageName: "Package 2",
+                    packageQuantity: 3,
+                    weight: "7 kg",
+                    location: "Surabaya",
+                    roi: "12%",
+                    monthlyPayment: "Rp 350,000",
+                    paymentMethodSet: "Bank Transfer",
+                  },
+                  // Tambahkan data paket lainnya di sini
+                ];
+
+                const packageTableBody =
+                  document.getElementById("package-table-body");
+
+                // Isi tabel dengan data paket
+                activePackages.forEach((package) => {
+                  const row = document.createElement("tr");
+                  row.innerHTML = `
+                        <td>${package.packageName}</td>
+                        <td>${package.packageQuantity}</td>
+                        <td>${package.weight}</td>
+                        <td>${package.location}</td>
+                        <td>${package.roi}</td>
+                        <td>${package.monthlyPayment}</td>
+                        <td>${package.paymentMethodSet}</td>
+                    `;
+                  packageTableBody.appendChild(row);
+                });
+              });
+            </script>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

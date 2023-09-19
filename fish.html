@@ -1,78 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="fish.css" />
-    <title>Pembelian Ikan</title>
   </head>
   <body>
-    <header>
-      <h1>Selamat Datang di Toko Paket</h1>
-    </header>
-    <main>
-      <section class="package-list">
-        <h2>List of Active Packages</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Package Name</th>
-              <th>Package Quantity</th>
-              <th>Weight</th>
-              <th>Location</th>
-              <th>ROI</th>
-              <th>Monthly Payment</th>
-              <th>Payment Method Set</th>
-            </tr>
-          </thead>
-          <tbody id="package-table-body">
-            <script>
-              document.addEventListener("DOMContentLoaded", function () {
-                // Simulasikan data paket aktif, Anda dapat menggantinya dengan data sebenarnya
-                const activePackages = [
-                  {
-                    packageName: "Package 1",
-                    packageQuantity: 5,
-                    weight: "10 kg",
-                    location: "Jakarta",
-                    roi: "15%",
-                    monthlyPayment: "Rp 500,000",
-                    paymentMethodSet: "Credit Card",
-                  },
-                  {
-                    packageName: "Package 2",
-                    packageQuantity: 3,
-                    weight: "7 kg",
-                    location: "Surabaya",
-                    roi: "12%",
-                    monthlyPayment: "Rp 350,000",
-                    paymentMethodSet: "Bank Transfer",
-                  },
-                  // Tambahkan data paket lainnya di sini
-                ];
-
-                const packageTableBody =
-                  document.getElementById("package-table-body");
-
-                // Isi tabel dengan data paket
-                activePackages.forEach((package) => {
-                  const row = document.createElement("tr");
-                  row.innerHTML = `
-                        <td>${package.packageName}</td>
-                        <td>${package.packageQuantity}</td>
-                        <td>${package.weight}</td>
-                        <td>${package.location}</td>
-                        <td>${package.roi}</td>
-                        <td>${package.monthlyPayment}</td>
-                        <td>${package.paymentMethodSet}</td>
-                    `;
-                  packageTableBody.appendChild(row);
-                });
-              });
-            </script>
-          </tbody>
-        </table>
-      </section>
-    </main>
+    <div class="frame">
+      <div class="buy-wrapper">
+        <div class="buy">
+          <div class="element">
+            <img class="group" src="img/group-5.png" />
+            <img class="img" src="img/image.png" />
+            <img class="group-2" src="img/group.png" />
+            <img class="group-3" src="img/group-2.png" />
+            <img class="group-4" src="img/group-3.png" />
+            <div class="div">
+              <div class="div-2">
+                <div class="text-wrapper">List of Active Packages</div>
+              </div>
+              <img class="group-5" src="img/group-4.png" />
+            </div>
+          </div>
+          <div class="div-3">
+            <div class="div-4">
+              <div class="frame-wrapper">
+                <div class="div-wrapper">
+                  <div class="text-wrapper-2">All</div>
+                </div>
+              </div>
+              <div class="frame-wrapper">
+                <div class="div-wrapper-2">
+                  <div class="text-wrapper-3">Completed</div>
+                </div>
+              </div>
+              <div class="frame-wrapper">
+                <div class="div-wrapper-2">
+                  <div class="text-wrapper-4">Pending</div>
+                </div>
+              </div>
+              <div class="frame-wrapper">
+                <div class="div-wrapper-2">
+                  <div class="text-wrapper-4">Rejected</div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-wrapper-2">
+              <div class="frame-wrapper-3">
+                <div class="div-5">
+                  <div class="div-6">
+                    <div class="text-wrapper-5">Package Name</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-6">Package Quantity</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-6">Weight</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-5">Location</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-5">ROI</div></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-5">Monthly Payment</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-5">Payment Method</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-5">Status</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-wrapper-4">
+              <div class="frame-wrapper-3">
+                <div class="div-5">
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Package 2</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-8">3</div></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-8">7 kg</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Kuala Lumpur</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-7">12%</div></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">RM75</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Bank Transfer</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-9">Success</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-wrapper-4">
+              <div class="frame-wrapper-3">
+                <div class="div-5">
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Package 1</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-8">5</div></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-8">10 kg</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Kuala Lumpur</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-7">15%</div></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">RM100</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Credit Card</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-9">Success</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-wrapper-5">
+              <div class="frame-wrapper-3">
+                <div class="div-5">
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Package 2</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-8">3</div></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-8">7 kg</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Kuala Lumpur</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-7">12%</div></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">RM75</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Bank Transfer</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-10">Pending</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-wrapper-4">
+              <div class="frame-wrapper-3">
+                <div class="div-5">
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Package 2</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-8">3</div></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-8">7 kg</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Kuala Lumpur</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-7">12%</div></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">RM75</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Bank Transfer</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-9">Success</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-wrapper-4">
+              <div class="frame-wrapper-3">
+                <div class="div-5">
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Package 2</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-8">3</div></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-8">7 kg</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Kuala Lumpur</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-7">12%</div></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">RM75</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Bank Transfer</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-11">Rejected</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-wrapper-4">
+              <div class="frame-wrapper-3">
+                <div class="div-5">
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Package 2</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-8">3</div></div>
+                  <div class="div-6"></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Kuala Lumpur</div>
+                  </div>
+                  <div class="div-6"><div class="text-wrapper-7">12%</div></div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">RM75</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-7">Bank Transfer</div>
+                  </div>
+                  <div class="div-6">
+                    <div class="text-wrapper-9">Success</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pagination">
+        <div class="overlap-group">
+          <img class="bold-arrows-alt" src="img/alt-arrow-left.png" />
+          <img class="bold-arrows-alt-2" src="img/alt-arrow-right.png" />
+        </div>
+        <div class="of-pages">of 1 pages</div>
+        <div class="pagination-button">
+          <div class="text-wrapper-12">1</div>
+          <img class="bold-arrows-alt-3" src="img/alt-arrow-left-2.png" />
+        </div>
+      </div>
+      <div class="pagination-2">
+        <div class="per-page">per page</div>
+        <div class="pagination-button-2">
+          <div class="text-wrapper-13">10</div>
+          <img class="bold-arrows-alt-4" src="img/alt-arrow-left-3.png" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>

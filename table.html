@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fish.css" />
+    <title>Pembelian Ikan</title>
+    <style>
+      /* Add CSS styles for different status colors */
+      .status-applicationsubmitted {
+        color: blue;
+      }
+      .status-pendingapproval {
+        color: orange;
+      }
+      .status-approved {
+        color: green;
+      }
+      .status-active {
+        color: blue;
+      }
+      .status-surrendered {
+        color: red;
+      }
+      .status-terminated {
+        color: purple;
+      }
+      .status-matured {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Selamat Datang di Toko Paket</h1>
+    </header>
+    <main>
+      <section class="package-list">
+        <h2>List of Active Packages</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Package Name</th>
+              <th>Package Quantity</th>
+              <th>Weight</th>
+              <th>Location</th>
+              <th>ROI</th>
+              <th>Monthly Payment</th>
+              <th>Payment Method</th>
+              <th>Status</th>
+              <th>Date Maturity</th>
+            </tr>
+          </thead>
+          <tbody id="package-table-body"></tbody>
+        </table>
+      </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Simulated data for active packages
+        const activePackages = [
+          {
+            packageName: "Package 1",
+            packageQuantity: 5,
+            weight: "10 kg",
+            location: "Jakarta",
+            roi: "15%",
+            monthlyPayment: "Rp 500,000",
+            paymentMethodSet: "Credit Card",
+            status: "Application Submitted",
+            dateMaturity: "2023-10-15",
+          },
+          {
+            packageName: "Package 2",
+            packageQuantity: 3,
+            weight: "7 kg",
+            location: "Surabaya",
+            roi: "12%",
+            monthlyPayment: "Rp 350,000",
+            paymentMethodSet: "Bank Transfer",
+            status: "Pending Approval",
+            dateMaturity: "2023-09-30",
+          },
+          {
+            packageName: "Package 3",
+            packageQuantity: 2,
+            weight: "5 kg",
+            location: "Bali",
+            roi: "18%",
+            monthlyPayment: "Rp 600,000",
+            paymentMethodSet: "Cash",
+            status: "Approved",
+            dateMaturity: "2023-11-10",
+          },
+          {
+            packageName: "Package 4",
+            packageQuantity: 7,
+            weight: "15 kg",
+            location: "Yogyakarta",
+            roi: "10%",
+            monthlyPayment: "Rp 450,000",
+            paymentMethodSet: "Credit Card",
+            status: "Active",
+            dateMaturity: "2023-12-05",
+          },
+          {
+            packageName: "Package 5",
+            packageQuantity: 4,
+            weight: "8 kg",
+            location: "Bandung",
+            roi: "5%",
+            monthlyPayment: "Rp 300,000",
+            paymentMethodSet: "Bank Transfer",
+            status: "Surrendered",
+            dateMaturity: "2023-09-20",
+          },
+          {
+            packageName: "Package 6",
+            packageQuantity: 1,
+            weight: "2 kg",
+            location: "Medan",
+            roi: "20%",
+            monthlyPayment: "Rp 700,000",
+            paymentMethodSet: "Cash",
+            status: "Terminated",
+            dateMaturity: "2023-08-15",
+          },
+          {
+            packageName: "Package 7",
+            packageQuantity: 6,
+            weight: "12 kg",
+            location: "Semarang",
+            roi: "14%",
+            monthlyPayment: "Rp 550,000",
+            paymentMethodSet: "Credit Card",
+            status: "Matured",
+            dateMaturity: "2023-10-30",
+          },
+          // Add more package data here...
+        ];
+
+        const packageTableBody = document.getElementById("package-table-body");
+
+        activePackages.forEach((package) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+                    <td>${package.packageName}</td>
+                    <td>${package.packageQuantity}</td>
+                    <td>${package.weight}</td>
+                    <td>${package.location}</td>
+                    <td>${package.roi}</td>
+                    <td>${package.monthlyPayment}</td>
+                    <td>${package.paymentMethodSet}</td>
+                    <td class="status-${package.status
+                      .toLowerCase()
+                      .replace(/[^a-z0-9]/g, "")}">${package.status}</td>
+                    <td>${package.dateMaturity}</td>
+                `;
+          packageTableBody.appendChild(row);
+        });
+      });
+    </script>
+  </body>
+</html>
